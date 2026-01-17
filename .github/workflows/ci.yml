@@ -12,18 +12,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build app
+      - name: Configure
         run: |
-          g++ -std=c++17 -pthread -Iinclude src/main.cpp src/ThreadManager.cpp -o app
+          cmake -S . -B build
 
-      - name: Build tests
+      - name: Build
         run: |
-          g++ -std=c++17 -pthread -Iinclude tests/test_threadmanager.cpp src/ThreadManager.cpp -o test_threadmanager
+          cmake --build build
 
       - name: Run tests
         run: |
-          ./test_threadmanager
-      - name: Build and run race-condition fixed demo
+          ./build/test_threadmanager
+
+      - name: Run race-condition fixed demo
         run: |
           g++ -std=c++17 -pthread tests/race_condition_fixed.cpp -o race_fixed
           ./race_fixed
