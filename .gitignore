@@ -1,0 +1,16 @@
+cat > .gitignore << 'EOF'
+# Build output
+build/
+*.o
+*.obj
+*.exe
+*.out
+app
+test_threadmanager
+race_demo
+race_fixed
+
+# OS/editor
+.DS_Store
+.vscode/
+EOF
