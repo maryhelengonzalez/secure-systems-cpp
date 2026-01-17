@@ -1,4 +1,0 @@
-/workspaces/secure-systems-cpp/build/CMakeFiles/app.dir
-/workspaces/secure-systems-cpp/build/CMakeFiles/test_threadmanager.dir
-/workspaces/secure-systems-cpp/build/CMakeFiles/edit_cache.dir
-/workspaces/secure-systems-cpp/build/CMakeFiles/rebuild_cache.dir

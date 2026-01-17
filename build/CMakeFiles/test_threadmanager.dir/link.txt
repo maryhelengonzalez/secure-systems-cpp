@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/test_threadmanager.dir/tests/test_threadmanager.cpp.o CMakeFiles/test_threadmanager.dir/src/ThreadManager.cpp.o -o test_threadmanager 
