@@ -23,3 +23,7 @@ jobs:
       - name: Run tests
         run: |
           ./test_threadmanager
+      - name: Build and run race-condition fixed demo
+        run: |
+          g++ -std=c++17 -pthread tests/race_condition_fixed.cpp -o race_fixed
+          ./race_fixed
