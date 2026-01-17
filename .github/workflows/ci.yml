@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build app
+        run: |
+          g++ -std=c++17 -pthread -Iinclude src/main.cpp src/ThreadManager.cpp -o app
+
+      - name: Build tests
+        run: |
+          g++ -std=c++17 -pthread -Iinclude tests/test_threadmanager.cpp src/ThreadManager.cpp -o test_threadmanager
+
+      - name: Run tests
+        run: |
+          ./test_threadmanager
