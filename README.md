@@ -10,3 +10,8 @@ Advanced C++ systems, concurrency, and security simulations
 - Race condition demonstration and fix using atomic operations
 - Unit testing of concurrent code
 - Continuous Integration with GitHub Actions
+## Build & Run (CMake)
+```bash
+cmake -S . -B build
+cmake --build build
+./build/app
